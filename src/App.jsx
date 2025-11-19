@@ -1,68 +1,30 @@
+import PPTBuilder from "./components/PPTBuilder";
+
+const preset = {
+  title: "花東青草藥文化：民間智慧的傳承與在地知識的再認識",
+  abstract: "花東地區因地理與族群多樣性，孕育出豐富的青草藥知識體系。本文以半結構式訪談法，記錄兩位在地耆老——王裕德與王勇伯——對青草藥的理解與實踐，呈現草藥知識的生活性、信仰性與家族傳承特質。",
+  motivation: "地理、氣候、族群多樣性；現代醫療普及下的知識斷層；保存與跨世代對話的必要性。",
+  method: "訪談對象：王裕德、王勇伯\n取樣：家中長輩牽線\n資料：半結構式訪談、錄音逐字、主題分析\n倫理：告知同意、尊重表述",
+  participants: "王裕德：自學、實作、辨識與配伍經驗\n王勇伯：信仰脈絡、神明教導、社群服務",
+  features: "生活化：取材周遭、可近性\n信仰結合：祭儀、祈禱、身心靈整合\n口耳相傳：家族與社群為單位，缺乏文字記錄",
+  reflection: "自主學習與地方實踐；信仰提供詮釋框架與社群信任；傳承的脆弱與活化契機；文化保存的倫理。",
+  conclusion: "青草藥文化為民間智慧結晶；建議：建立植物誌與口述資料庫、教育課程、跨域合作、數位保存與安全聲明。"
+};
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
-
+    <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-slate-900 to-emerald-900">
       <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
+        <div className="max-w-5xl w-full space-y-8">
           <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
+            <h1 className="text-4xl font-bold text-emerald-100 tracking-tight mb-2">花東青草藥文化 簡報產生器</h1>
+            <p className="text-emerald-200/80">將你的研究內容貼上，按一下即可生成PPT檔案</p>
+          </div>
+
+          <PPTBuilder preset={preset} />
+
+          <div className="text-center text-sm text-emerald-200/60">
+            下載檔案僅供學術與文化展示用途，不構成醫療建議。
           </div>
         </div>
       </div>

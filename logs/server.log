@@ -3,7 +3,9 @@
 > vite
 
 
-  VITE v5.4.20  ready in 272 ms
+  VITE v5.4.20  ready in 260 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.21.197:3000/
+11:57:53 AM [vite] ✨ new dependencies optimized: pptxgenjs
+11:57:53 AM [vite] ✨ optimized dependencies changed. reloading
